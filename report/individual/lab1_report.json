@@ -1,0 +1,74 @@
+{
+ "seed": 4115,
+ "predictions": {
+  "ml_f1": {
+   "text": "F1 ~0.6, recall cao hơn vì số lượng positive cao hơn nhiều negative, model sẽ nghiêng về hướng negative, làm bỏ sót nhiều positive và làm recal cao",
+   "time": "16:39:04"
+  },
+  "ml_lr": {
+   "text": "lr = 0.001 thì đường loss sẽ có dạng đường thẳng, lr=50 thì đường loss sẽ có hình gồ ghề",
+   "time": "16:39:11"
+  },
+  "dl_curve": {
+   "text": "(1) Không giảm mãi (2) MLP có thể hơn Logistic Regression về F1",
+   "time": "16:39:22"
+  },
+  "dl_relu": {
+   "text": "Dự đoán F1 gần như không thay đổi",
+   "time": "16:39:29"
+  }
+ },
+ "checks": {
+  "1.1 vectorize": true,
+  "1.2 sigmoid / predict_proba": true,
+  "1.3 train_logreg": true,
+  "1.4 metrics": true,
+  "2.1 build_mlp": true,
+  "2.2 train_mlp": true,
+  "3.1–3.2 cosine / top_k_similar": false
+ },
+ "experiments": [
+  {
+   "key": "ml_f1",
+   "time": "16:39:04"
+  },
+  {
+   "key": "ml_lr",
+   "time": "16:39:11"
+  },
+  {
+   "key": "dl_curve",
+   "time": "16:39:22"
+  },
+  {
+   "key": "dl_relu",
+   "time": "16:39:30"
+  }
+ ],
+ "results": {
+  "1. BoW + LogReg (tự code)": {
+   "accuracy": 0.9716129032258064,
+   "precision": 1.0,
+   "recall": 0.7755102040816326,
+   "f1": 0.8735632183908045,
+   "f1_SUB": 0.8571428571428571,
+   "train_s": 2.998034132000612,
+   "msg_per_s": 1417.6472401522178,
+   "p50_ms": 1.7528939988551429,
+   "p95_ms": 3.9751782491293843,
+   "usd_per_1k": 0.0
+  },
+  "2. BoW + MLP (deep learning)": {
+   "accuracy": 0.984516129032258,
+   "precision": 0.9777777777777777,
+   "recall": 0.8979591836734694,
+   "f1": 0.9361702127659575,
+   "f1_SUB": 0.888888888888889,
+   "train_s": 5.721747388000949,
+   "msg_per_s": 772.6877242591459,
+   "p50_ms": 2.0446240014280193,
+   "p95_ms": 3.353702302774761,
+   "usd_per_1k": 0.0
+  }
+ }
+}
