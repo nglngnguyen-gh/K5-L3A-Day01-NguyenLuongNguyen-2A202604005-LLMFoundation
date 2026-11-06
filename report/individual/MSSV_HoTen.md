@@ -2,25 +2,29 @@
 
 > Đổi tên file này thành `MSSV_HoTen.md` của bạn, ví dụ `2A20260000_NguyenVanAn.md`, rồi điền từng mục. Xoá các dòng hướng dẫn in nghiêng khi xong.
 
-- **MSSV:**
-- **Họ và tên:**
-- **SEED** (in ở ô đầu notebook):
+- **MSSV:** 2A202604005
+- **Họ và tên:** Nguyễn Lương Nguyên
+- **SEED** (in ở ô đầu notebook): 4115
 
 ## 1. Bằng chứng
 
 | Tệp | Có? |
 | --- | --- |
-| [`day01_lab.ipynb`](day01_lab.ipynb) — notebook đã chạy, còn output | ☐ |
-| [`lab1_report.json`](lab1_report.json) — do ô "Báo cáo cuối" sinh ra | ☐ |
-| [`hand_calc.jpg`](hand_calc.jpg) — ảnh tính tay có các bước | ☐ |
+| [`day01_lab.ipynb`](day01_lab.ipynb) — notebook đã chạy, còn output | Có |
+| [`lab1_report.json`](lab1_report.json) — do ô "Báo cáo cuối" sinh ra | Có |
+| [`hand_calc.jpg`](hand_calc.jpg) — ảnh tính tay có các bước | Có |
 
 ## 2. Kết quả chính
 
-*Chép bảng so sánh cuối Phần 5 (F1 test, F1 SUB 40, p95 ms/tin, USD/1k tin) của chính bạn.*
+                                  f1  f1_SUB
+1. BoW + LogReg (tự code)     0.874   0.857
+2. BoW + MLP (deep learning)  0.936   0.889
 
 ## 3. Dự đoán và thực tế
 
-*Chọn 3 dự đoán `predict(...)` lệch nhiều nhất so với kết quả. Mỗi cái: bạn đoán gì, ra gì, vì sao lệch.*
+  [16:39:04] ml_f1: F1 ~0.6, recall cao hơn vì số lượng positive cao hơn nhiều negative, model sẽ nghiêng về hướng negative, làm bỏ sót nhiều positive và làm recal cao
+  [16:39:11] ml_lr: lr = 0.001 thì đường loss sẽ có dạng đường thẳng, lr=50 thì đường loss sẽ có hình gồ ghề
+  [16:39:22] dl_curve: (1) Không giảm mãi (2) MLP có thể hơn Logistic Regression về F1
 
 ## 4. Phân tích 50 case khó
 
